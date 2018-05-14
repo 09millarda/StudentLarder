@@ -3,7 +3,8 @@ const all = require('./all');
 const models = require('./models');
 const cars = require('./cars');
 
-routes.use('/', all);
+routes.get('/', all);
+
 routes.use('/models', models);
 routes.use('/cars', cars);
 
