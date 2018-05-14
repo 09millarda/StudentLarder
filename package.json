@@ -1,0 +1,18 @@
+{
+  "name": "student_larder",
+  "version": "1.0.0",
+  "description": "Enter your ingredients and get a list of meals that will use them up",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Alistair Millard",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "express": "^4.16.3",
+    "jquery": "^1.9.1",
+    "popper": "^1.0.1",
+    "popper.js": "^1.14.3"
+  }
+}
