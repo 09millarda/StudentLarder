@@ -1,11 +1,6 @@
 const routes = require('express').Router();
-const all = require('./all');
-const models = require('./models');
-const cars = require('./cars');
+const search = require('./search');
 
-routes.get('/', all);
-
-routes.use('/models', models);
-routes.use('/cars', cars);
+routes.use('/search', search);
 
 module.exports = routes;
