@@ -1,0 +1,97 @@
+html,body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%;
+  background: #F8F9FA;
+}
+
+.jumbotron {
+  background-color: #fff !important;
+  margin: 0px !important;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.card-rating {
+  color: rgb(214, 214, 67);
+  float: right;
+  font-weight: 600;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-top: 1px solid #F8F9FA;
+}
+
+footer p {
+  margin: 0px !important;
+}
+
+.btn-social {
+  color: white;
+  text-align: center;
+  padding: 10px 0px !important;
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 10px;
+}
+
+.btn-google {
+  background-color: #DD4B39;
+}
+
+.btn-facebook {
+  background-color: #4267B2;
+}
+
+.btn-github {
+  background-color: #24292E;
+}
+
+.btn-social i {
+  margin-right: 10px;
+}
+
+.ReactModal__Content {
+  right: auto !important;
+  bottom: auto !important;
+  left: 50% !important;
+  top: 40% !important;
+  transform: translate(-50%, -50%);
+  border: 0px !important;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.4);
+  outline: none !important;
+  padding: 0px !important;
+  margin: 0px;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(0,0,0,0.7) !important;
+}
+
+.formError {
+  color: #f44242;
+  margin-top: 3px;
+  font-size: 0.875em;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+  background: #ff5e5e !important;
+  color: white !important;
+}
+
+.list-group-item:active {
+  background: #ff3f3f !important;
+}
+
+.ingredient {
+  transition: .1s;
+}

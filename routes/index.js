@@ -1,6 +1,6 @@
 const routes = require('express').Router();
-const search = require('./search');
+const api = require('./api');
 
-routes.use('/search', search);
+routes.use('/api', api);
 
 module.exports = routes;

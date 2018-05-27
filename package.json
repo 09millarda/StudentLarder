@@ -4,14 +4,19 @@
   "description": "Enter your ingredients and get a list of meals that will use them up",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "set PORT=5000 && nodemon app.js"
   },
   "author": "Alistair Millard",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.1.1",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
     "express": "^4.16.3",
-    "jquery": "^1.9.1",
+    "firebase-admin": "^5.12.1",
+    "jsonwebtoken": "^8.2.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
     "popper": "^1.0.1",
     "popper.js": "^1.14.3",
     "request": "^2.86.0"
