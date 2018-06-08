@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 class Search extends Component {
   constructor() {
     super();
@@ -71,9 +70,15 @@ class Search extends Component {
     }
   }
 
+  searchForRecipes = () => {
+    this.props.clearSearchResults();
+    this.props.searchForRecipes(this.state.ingredients.map(i => i.props['data-key']));
+    this.props.history.push('/search/results');
+  }
+
   render() {
     let clearButton = <button className="btn btn-link" style={{ width: '100%', textAlign: 'center' }} onClick={() => this.setState({ ingredients: [] })}>clear</button>;
-    let searchButton = <button className="btn btn-primary px-5 mt-3">Search</button>;
+    let searchButton = <button className="btn btn-primary px-5 mt-3" onClick={this.searchForRecipes}>Search</button>
     if (this.state.ingredients.length === 0) {
       clearButton = undefined;
       searchButton = undefined;
@@ -83,7 +88,7 @@ class Search extends Component {
         <section className="jumbotron text-center" style={{ marginBottom: '0px' }}>
           <div className="container" style={{ width: '640px' }}>
             <h1 className="jumbotron-heading">Recipe Searcher</h1>
-            <p className="text-muted">Search for great recipes by entering your ingredients below.</p>
+            <p className="text-muted lead">Search for great recipes by entering your ingredients below.</p>
           </div>
         </section>
         <div className="jumbotron bg-light">

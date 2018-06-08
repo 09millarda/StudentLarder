@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import config from './../../config/config';
 
 class Login extends Component {
   render() {
@@ -7,7 +8,7 @@ class Login extends Component {
         <h3 className="mb-3">Login to Student Larder</h3>
         <br/>
         <div className="container">
-          <button className="btn btn-google btn-social" type="button">
+          <button className="btn btn-google btn-social" type="button" onClick={this.loginWithGoogle}>
             <i className="fab fa-google pr-1" />
             <span>Login with Google</span>
           </button>
@@ -24,6 +25,17 @@ class Login extends Component {
         </div>
       </div>
     );
+  }
+
+  loginWithGoogle = () => {
+    const googleOAuth2Window = window.open(`${config.URL}/api/auth/google`, 'Google OAuth2', 'height=500,width=350');
+    
+    const timer = setInterval(() => {
+      if (googleOAuth2Window.closed) {
+        clearInterval(timer);
+        this.props.closeLoginModal();
+      }
+    }, 500);
   }
 }
 

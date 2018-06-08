@@ -6,7 +6,7 @@ class Footer extends Component {
       <footer className="text-muted footer navbar-fixed-bottom">
         <div className="container">
           <p className="float-right">
-            <a href="#">Back to top</a>
+            <button onClick={() => document.documentElement.scrollTop = 0} className="btn btn-link">Back to top</button>
           </p>
           <p style={{ fontWeight: '600' }}>© Copyright Alistair Millard 2018</p>
           <div style={{ height: '5px' }} />

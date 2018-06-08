@@ -20,5 +20,8 @@ module.exports = {
   },
   session: {
     cookieKey: '6BNXnFo4XyhOXNLyVdLqvmxdJ12Qd5nU'
+  },
+  food2fork: {
+    key: '83285ac8ca3f719668520b347586a016'
   }
 }

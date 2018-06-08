@@ -29,7 +29,7 @@ class NavBar extends Component {
                 <NavLink to="/search" className="nav-link">Search</NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Top Recipes</a>
+                <NavLink to="/top-recipes" className="nav-link">Top Recipes</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink to="/about" className="nav-link">About</NavLink>
@@ -45,11 +45,16 @@ class NavBar extends Component {
         <Modal
           isOpen={this.state.loginModalIsOpen}
           contentLabel="Login Modal"
-          onRequestClose={() => this.setState({ loginModalIsOpen: false })}>
-          <Login />
+          ariaHideApp={false}
+          onRequestClose={this.closeModal.bind(this)}>
+          <Login closeLoginModal={this.closeModal.bind(this)} />
         </Modal> 
       </nav>
     );
+  }
+
+  closeModal = () => {
+    this.setState({ loginModalIsOpen: false });
   }
 }
 

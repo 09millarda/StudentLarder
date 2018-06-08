@@ -1,6 +1,13 @@
-import { FETCH_TOP_RECIPES, FETCH_TRENDING_RECIPES } from '../actions/recipes';
+import { FETCH_TOP_RECIPES, FETCH_TRENDING_RECIPES, CLEAR_SEARCH_RESULTS } from '../actions/recipes';
+import { SEARCH_FOR_RECIPES } from './../actions/recipes';
 
-export const reducer = (state = {}, action) => {
+const defaultState = {
+  topRecipes: [],
+  trendingRecipes: [],
+  results: []
+}
+
+export const reducer = (state = defaultState, action) => {
   const newState = JSON.parse(JSON.stringify(state));
   switch (action.type) {
     case FETCH_TRENDING_RECIPES:
@@ -8,8 +15,14 @@ export const reducer = (state = {}, action) => {
       return newState;
     case FETCH_TOP_RECIPES:
       newState.topRecipes = action.payload.topRecipes;
-      return newState
+      return newState;
+    case SEARCH_FOR_RECIPES:
+      newState.results = action.payload.results;
+      return newState;
+    case CLEAR_SEARCH_RESULTS:
+      newState.results = [];
+      return newState;
     default: 
-      return state;
+      return newState;
   }
 }

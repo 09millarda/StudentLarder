@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
-import { reducer as trendingRecipesReducer } from './recipes';
+import { reducer as recipesReducer } from './recipes';
+import { reducer as accountReducer } from './account';
 
 export default combineReducers({
-  recipes: trendingRecipesReducer
+  recipes: recipesReducer,
+  account: accountReducer
 });

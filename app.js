@@ -7,7 +7,11 @@ const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session');
 
-app.set('view engine', 'ejs');
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://dev.studentlarder.com");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 app.use(cookieParser());
 app.use(cookieSession({
@@ -19,8 +23,6 @@ app.use(passport.session());
 
 app.use('/', routes);
 
-console.log(process.env.NODE_ENV);
-
-app.listen(process.env.PORT, () => {
-  console.log(`App listening on port http://localhost:${process.env.PORT}`);  
+app.listen(5000, () => {
+  console.log(`App listening on port http://localhost:5000`);  
 });

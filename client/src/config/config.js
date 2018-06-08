@@ -1,7 +1,5 @@
-export default () => {
-  return {
-    "api": {
-      "url": 'http://localhost:5005/'
-    }
-  }
+const config = {
+  "URL": process.env.REACT_APP_API_URL
 }
+
+export default config;

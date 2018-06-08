@@ -1,29 +1,9 @@
 import React, { Component } from 'react';
-import RecipeCard from '../recipe-card/RecipeCard';
 import { Link } from 'react-router-dom';
+import Carousel from './../carousel/Carousel';
 
 class Home extends Component {
-  constructor (props) {
-    super (props);
-  }
-
-  componentDidMount () {
-    this.props.fetchTrendingRecipes();
-  }
-
-  componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
-  }
-
   render () {
-    const recipe = {
-      publisher: 'The Pioneer Woman',
-      title: 'Perfect Iced Coffee',
-      social_rank: 100,
-      source_url: 'http://thepioneerwoman.com/cooking/2011/06/perfect-iced-coffee/',
-      image_url: 'http://static.food2fork.com/icedcoffee5766.jpg'
-    };
-
     return (
       <div>
         <section className="jumbotron text-center" style={{ marginBottom: '0px' }}>
@@ -41,18 +21,8 @@ class Home extends Component {
           <div className="text-center py-4">
             <h2>Trending Recipes</h2>
           </div> 
-          <div className="container">           
-            <div className="row">
-              <div className="col-md-4">
-                <RecipeCard recipe={recipe} />
-              </div>
-              <div className="col-md-4">
-                <RecipeCard recipe={recipe} />
-              </div>
-              <div className="col-md-4">
-                <RecipeCard recipe={recipe} />
-              </div>
-            </div>
+          <div className="container">
+            <Carousel recipes={this.props.trendingRecipes} />
           </div>
         </div>
       </div>

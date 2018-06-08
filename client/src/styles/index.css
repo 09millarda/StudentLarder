@@ -3,7 +3,7 @@ html,body {
   padding: 0;
   font-family: sans-serif;
   height: 100%;
-  background: #F8F9FA;
+  background: #F8F9FA !important;
 }
 
 .jumbotron {
@@ -25,6 +25,7 @@ footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
   border-top: 1px solid #F8F9FA;
+  background: #fff !important;
 }
 
 footer p {
@@ -94,4 +95,66 @@ footer p {
 
 .ingredient {
   transition: .1s;
+}
+
+.recipe-image {
+  background-repeat:no-repeat;
+  background-size: 110% auto;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 250px;
+}
+
+.spinner {
+  margin: 10px auto 13px;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: rgba(0,0,0,0.2);
+  height: 100%;
+  width: 4px;
+  margin: 0 1px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1s infinite ease-in-out;
+  animation: sk-stretchdelay 1s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
 }

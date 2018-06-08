@@ -1,6 +1,7 @@
 const request = require('request');
+const keys = require('../../../config/keys');
 
-const KEY = '83285ac8ca3f719668520b347586a016';
+const KEY = keys.food2fork.key;
 
 module.exports = (req, res, next) => {
   request(`http://food2fork.com/api/get?key=${KEY}&rId=${req.params.recipeId}`, (error, response, body) => {
