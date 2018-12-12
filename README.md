@@ -4,4 +4,4 @@ Search for recipes using those weird ingredients you find at the back of your la
 
 ## Video:
 
-https://drive.google.com/drive/my-drive
+https://drive.google.com/file/d/1_FwXgEJ_4en5DQB-VB51GkLprBNi4S72/view?usp=sharing
